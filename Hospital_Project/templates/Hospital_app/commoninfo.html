@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--{% load static %}-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Selection</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+<div class = "container">
+        <div class="jumbotron">
+
+            <div class="text-center" >
+                <img src = "{% static 'images/lifeline.png' %}"><br><br>
+                <h1 ><strong>LifeLine Hospital</strong></h1>
+
+            </div>
+            <br>
+            <div class="text-center">
+                <span style="padding-right:40px"><a href="{% url 'adduserinfo' %}" class="btn btn-info btn-lg" role="button" aria-pressed="true">Register</a></span>
+                <span><a href="{% url 'fetchuserinfo' %}" class="btn btn-warning btn-lg" role="button" aria-pressed="true">Check</a></span>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>

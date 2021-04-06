@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Lifeline Hospital</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+    <div class = "container">
+        <div class="jumbotron ">
+            <div class="text-center" >
+                <img src = "{% static 'images/lifeline.png' %}"><br><br>
+                <h1 ><strong>LifeLine Hospital, New Panvel</strong></h1><br>
+                <h1 ><strong>Welcome!</strong></h1>
+
+            </div>
+            <br><br>
+            {% if flag %}
+            <br>
+                <div class=" alert alert-success text-center"><strong>Registered Successfully !</strong></div>
+            {% endif %}
+            <br><br><br>
+            <div class="alert alert-primary">
+                <h4>Go to <em><strong>/commoninfo</strong></em> for navigation using Buttons</h4>
+                <h4>Go to <em><strong>/commoninfo/add</strong></em> to add the New Patient</h4>
+                <h4>Go to <em><strong>/commoninfo/fetch</strong></em> to check the Existing Patient</h4>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

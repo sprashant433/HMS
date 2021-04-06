@@ -1,0 +1,28 @@
+body{
+    background-color: #F2F3F4  ;
+    overflow-x: hidden;
+
+}
+h3{
+color:#34495E;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: left;
+  width: 150px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+input {
+  height: 30px;
+  flex: 0 0 200px;
+  margin-left: 10px;
+}
+#ss{
+margin-bottom: 10px;
+height:40px;
+}

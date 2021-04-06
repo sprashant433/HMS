@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'css/regis.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row justify-content-center">
+		<div class="col-md-5 text-left bg-white rounded shadow-lg mb-5 mt-5 py-3">
+            <div class="text-center">
+                <img src = "{% static 'images/lifeline.png' %}"><br><br>
+            </div>
+            <h3 class="h3 mb-3 font-weight-bold text-center">Registration</h3><br>
+            <form method="POST">
+
+                <div class="form-group">
+                    <label for="id_uniqueID">UniqueID:</label>
+                    <input type="text" name="uniqueID" value="{{fakeid}}" maxlength="246" required id="id_uniqueID" >
+                    {% if form.uniqueID.errors %}
+                    {% for error in form.uniqueID.errors %}
+                    <br>
+                        <small class="text-danger">{{ error|escape }}</small>
+                    {% endfor %}
+                    {% endif %}
+
+                </div>
+                <div class="form-group">
+                    <label for="id_Username">Username:</label>
+                    <input type="text" name="Username" maxlength="128" required id="id_Username">
+                    {% if form.Username.errors %}
+                    {% for error in form.Username.errors %}
+                    <br>
+                        <small class="text-danger">{{ error|escape }}</small>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="id_Email">Email:</label>
+                    <input type="email" name="Email" maxlength="246" required id="id_Email">
+                    {% if form.Email.errors %}
+                    {% for error in form.Email.errors %}
+                    <br>
+                        <small class="text-danger">{{ error|escape }}</small>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="id_First_Name">First Name:</label>
+                    <input type="text" name="First_Name" maxlength="128" required id="id_First_Name">
+                    {% if form.First_Name.errors %}
+                    {% for error in form.First_Name.errors %}
+                    <br>
+                        <small class="text-danger">{{ error|escape }}</small>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="id_Last_Name">Last Name:</label>
+                    <input type="text" name="Last_Name" maxlength="128" required id="id_Last_Name">
+                    {% if form.Last_Name.errors %}
+                    {% for error in form.Last_Name.errors %}
+                    <br>
+                        <small class="text-danger">{{ error|escape }}</small>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="id_DOB">DOB:</label>
+                    <input type="text" name="DOB" required id="id_DOB">
+                    {% if form.DOB.errors %}
+                    {% for error in form.DOB.errors %}
+                    <br>
+                        <small class="text-danger">{{ error|escape }}</small>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="id_Password">Password:</label>
+                    <input type="password" name="Password" required id="id_Password">
+                    {% if form.Password.errors %}
+                    {% for error in form.Password.errors %}
+                    <br>
+                        <small class="text-danger">{{ error|escape }}</small>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="id_Confirm_Password">Confirm Password:</label>
+                    <input type="password" name="Confirm_Password" required id="id_Confirm_Password">
+                    {% if form.Confirm_Password.errors %}
+                    {% for error in form.Confirm_Password.errors %}
+                    <br>
+                        <small class="text-danger">{{ error|escape }}</small>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+
+                {% csrf_token %}
+                <div class="text-center">
+                    <input id="ss" type="submit" class ="btn btn-info" value="Register">
+                </div>
+
+            </form>
+
+
+        </div>
+    </div>
+
+</body>
+</html>
