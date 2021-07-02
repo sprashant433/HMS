@@ -1,1 +1,1 @@
-# TGS_Training_Python-Project
+# Hospital_Management_System
